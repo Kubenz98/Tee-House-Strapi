@@ -4,18 +4,33 @@
   "info": {
     "singularName": "test-type",
     "pluralName": "test-types",
-    "displayName": "testType"
+    "displayName": "Products",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "test": {
+    "Name": {
       "type": "string"
     },
-    "cena": {
+    "Price": {
       "type": "decimal"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }
