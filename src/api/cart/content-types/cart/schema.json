@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "orders",
+  "collectionName": "carts",
   "info": {
-    "singularName": "order",
-    "pluralName": "orders",
-    "displayName": "order",
+    "singularName": "cart",
+    "pluralName": "carts",
+    "displayName": "Cart",
     "description": ""
   },
   "options": {
@@ -15,18 +15,17 @@
     "user": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "plugin::users-permissions.user"
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "cart"
     },
     "totalAmount": {
-      "type": "decimal"
+      "type": "decimal",
+      "default": 0
     },
-    "orderItems": {
+    "cartItems": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::order-item.order-item"
-    },
-    "checkout": {
-      "type": "json"
+      "target": "api::cart-item.cart-item"
     }
   }
 }

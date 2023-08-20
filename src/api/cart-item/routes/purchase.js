@@ -1,9 +1,9 @@
 module.exports = {
   routes: [
     {
-      method: "DELETE",
+      method: "PATCH",
       path: "/purchase",
-      handler: "cart-item.deleteAll",
+      handler: "cart-item.purchase",
       config: {
         policies: [],
       },

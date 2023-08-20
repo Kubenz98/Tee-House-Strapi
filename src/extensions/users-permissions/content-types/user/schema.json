@@ -68,6 +68,12 @@
       "relation": "oneToMany",
       "target": "api::cart-item.cart-item",
       "mappedBy": "user"
+    },
+    "cart": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cart.cart",
+      "inversedBy": "user"
     }
   }
 }
